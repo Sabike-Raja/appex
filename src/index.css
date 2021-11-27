@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.LineChart-Component .chartContainer{
+  position: relative;
+  height: 30vh;
+  width: 90vw; 
+}
