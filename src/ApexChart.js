@@ -1,8 +1,10 @@
 import React from "react";
 import Chart from "react-apexcharts";
 import moment from "moment";
+import ApexCharts from "apexcharts";
 
 import { mockData } from "./constant";
+import { useEffect } from "react/cjs/react.development";
 
 function App() {
   let seriesData = [];
@@ -25,6 +27,7 @@ function App() {
       type: "area",
       stacked: false,
       height: 650,
+      id:"assetDistribution",
       zoom: {
         type: "x",
         enabled: true,
@@ -120,9 +123,32 @@ function App() {
     },
   };
 
+  // const test = new ApexCharts();
+
+  // useEffect(() => {
+  //   const el = document.getElementById("charrt")
+  //   var chart = new ApexCharts(el, options);
+  //   chart.render();
+  // }, []);
+
+  console.log("dsflks;dlf", ApexCharts.exec);
+
   return (
-    <div id="chart">
+    <div id="chat-id">
+
       <Chart options={options} series={series} type="line" height={650} />
+      <div id="charrt"></div>
+      <button
+        onClick={() => {
+          ApexCharts.exec(
+            "assetDistribution",
+            "hideSeries",
+            "sensorReadings 1"
+          );
+        }}
+      >
+        Hide
+      </button>
     </div>
   );
 }
