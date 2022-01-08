@@ -201,176 +201,208 @@ export const mockData = [
       },
     ],
   },
-  //  {
-  //     "_id":3,
-  //     "sensorReadings":[
-  //        {
-  //           "_id":"61740b10b791f5a98db7ee03",
-  //           "sensor_serial":117964800,
-  //           "channel_nr":3,
-  //           "value":1204196504,
-  //           "logger_serial":117964800,
-  //           "timestamp":1634994960627
-  //        },
-  //        {
-  //           "_id":"617156409e83bb81cd0db352",
-  //           "sensor_serial":117964800,
-  //           "channel_nr":3,
-  //           "value":1204239073,
-  //           "logger_serial":117964800,
-  //           "timestamp":1634817600436
-  //        },
-  //        {
-  //           "_id":"617154249e83bb81cd0db325",
-  //           "sensor_serial":117964800,
-  //           "channel_nr":3,
-  //           "value":1204239982,
-  //           "logger_serial":117964800,
-  //           "timestamp":1634817060289
-  //        },
-  //        {
-  //           "_id":"617152089e83bb81cd0db2f8",
-  //           "sensor_serial":117964800,
-  //           "channel_nr":3,
-  //           "value":1204238346,
-  //           "logger_serial":117964800,
-  //           "timestamp":1634816520189
-  //        },
-  //        {
-  //           "_id":"61714f749e83bb81cd0db2c1",
-  //           "sensor_serial":117964800,
-  //           "channel_nr":3,
-  //           "value":1204241153,
-  //           "logger_serial":117964800,
-  //           "timestamp":1634815860928
-  //        },
-  //        {
-  //           "_id":"61714bb49e83bb81cd0db271",
-  //           "sensor_serial":117964800,
-  //           "channel_nr":3,
-  //           "value":1204243966,
-  //           "logger_serial":117964800,
-  //           "timestamp":1634814900533
-  //        },
-  //        {
-  //           "_id":"617149989e83bb81cd0db244",
-  //           "sensor_serial":117964800,
-  //           "channel_nr":3,
-  //           "value":1204246003,
-  //           "logger_serial":117964800,
-  //           "timestamp":1634814360512
-  //        },
-  //        {
-  //           "_id":"617147f49e83bb81cd0db221",
-  //           "sensor_serial":117964800,
-  //           "channel_nr":3,
-  //           "value":1204246894,
-  //           "logger_serial":117964800,
-  //           "timestamp":1634813940429
-  //        },
-  //        {
-  //           "_id":"6171459c9e83bb81cd0db1f4",
-  //           "sensor_serial":117964800,
-  //           "channel_nr":3,
-  //           "value":1204247830,
-  //           "logger_serial":117964800,
-  //           "timestamp":1634813340408
-  //        },
-  //        {
-  //           "_id":"617143809e83bb81cd0db1c7",
-  //           "sensor_serial":117964800,
-  //           "channel_nr":3,
-  //           "value":1204248425,
-  //           "logger_serial":117964800,
-  //           "timestamp":1634812800064
-  //        }
-  //     ]
-  //  },
-  //  {
-  //     "_id":0,
-  //     "sensorReadings":[
-  //        {
-  //           "_id":"61740bc4b791f5a98db7ee12",
-  //           "sensor_serial":117964800,
-  //           "channel_nr":0,
-  //           "value":1082140572,
-  //           "logger_serial":117964800,
-  //           "timestamp":1634995140457
-  //        },
-  //        {
-  //           "_id":"617157309e83bb81cd0db361",
-  //           "sensor_serial":117964800,
-  //           "channel_nr":0,
-  //           "value":1082338875,
-  //           "logger_serial":117964800,
-  //           "timestamp":1634817840515
-  //        },
-  //        {
-  //           "_id":"617154d89e83bb81cd0db334",
-  //           "sensor_serial":117964800,
-  //           "channel_nr":0,
-  //           "value":1082338875,
-  //           "logger_serial":117964800,
-  //           "timestamp":1634817240212
-  //        },
-  //        {
-  //           "_id":"617152bc9e83bb81cd0db307",
-  //           "sensor_serial":117964800,
-  //           "channel_nr":0,
-  //           "value":1082338875,
-  //           "logger_serial":117964800,
-  //           "timestamp":1634816700788
-  //        },
-  //        {
-  //           "_id":"617150289e83bb81cd0db2d0",
-  //           "sensor_serial":117964800,
-  //           "channel_nr":0,
-  //           "value":1082338875,
-  //           "logger_serial":117964800,
-  //           "timestamp":1634816040639
-  //        },
-  //        {
-  //           "_id":"61714e0c9e83bb81cd0db2a3",
-  //           "sensor_serial":117964800,
-  //           "channel_nr":0,
-  //           "value":1082338875,
-  //           "logger_serial":117964800,
-  //           "timestamp":1634815500456
-  //        },
-  //        {
-  //           "_id":"61714c689e83bb81cd0db280",
-  //           "sensor_serial":117964800,
-  //           "channel_nr":0,
-  //           "value":1082341209,
-  //           "logger_serial":117964800,
-  //           "timestamp":1634815080379
-  //        },
-  //        {
-  //           "_id":"61714a4c9e83bb81cd0db253",
-  //           "sensor_serial":117964800,
-  //           "channel_nr":0,
-  //           "value":1082341209,
-  //           "logger_serial":117964800,
-  //           "timestamp":1634814540805
-  //        },
-  //        {
-  //           "_id":"6171468c9e83bb81cd0db203",
-  //           "sensor_serial":117964800,
-  //           "channel_nr":0,
-  //           "value":1082341209,
-  //           "logger_serial":117964800,
-  //           "timestamp":1634813580805
-  //        },
-  //        {
-  //           "_id":"617144349e83bb81cd0db1d6",
-  //           "sensor_serial":117964800,
-  //           "channel_nr":0,
-  //           "value":1082341209,
-  //           "logger_serial":117964800,
-  //           "timestamp":1634812980868
-  //        }
-  //     ]
-  //  },
+  {
+    _id: 3,
+    sensorReadings: [
+      {
+        _id: "61740c00b791f5a98db7ee17",
+        sensor_serial: 117964800,
+        channel_nr: 6,
+        value: 1200,
+        logger_serial: 117964800,
+        timestamp: 2634995200017,
+      },
+      {
+        _id: "61740c00b791f5a98db7ee17",
+        sensor_serial: 117964800,
+        channel_nr: 6,
+        value: 1000,
+        logger_serial: 117964800,
+        timestamp: 2534995200017,
+      },
+      {
+        _id: "6171576c9e83bb81cd0db366",
+        sensor_serial: 117964800,
+        channel_nr: 6,
+        value: 800,
+        logger_serial: 117964800,
+        timestamp: 2434817900054,
+      },
+      {
+        _id: "617155149e83bb81cd0db339",
+        sensor_serial: 117964800,
+        channel_nr: 6,
+        value: 400,
+        logger_serial: 117964800,
+        timestamp: 2334817300815,
+      },
+      {
+        _id: "617152f89e83bb81cd0db30c",
+        sensor_serial: 117964800,
+        channel_nr: 6,
+        value: 208,
+        logger_serial: 117964800,
+        timestamp: 2234816760332,
+      },
+      {
+        _id: "617151909e83bb81cd0db2ee",
+        sensor_serial: 117964800,
+        channel_nr: 6,
+        value: 500,
+        logger_serial: 117964800,
+        timestamp: 2134816400090,
+      },
+      {
+        _id: "617150649e83bb81cd0db2d5",
+        sensor_serial: 117964800,
+        channel_nr: 6,
+        value: 150,
+        logger_serial: 117964800,
+        timestamp: 2034816100211,
+      },
+      {
+        _id: "61714e489e83bb81cd0db2a8",
+        sensor_serial: 117964800,
+        channel_nr: 6,
+        value: 450,
+        logger_serial: 117964800,
+        timestamp: 1934815560021,
+      },
+      {
+        _id: "61714ca49e83bb81cd0db285",
+        sensor_serial: 117964800,
+        channel_nr: 6,
+        value: 400,
+        logger_serial: 117964800,
+        timestamp: 1834815140943,
+      },
+      {
+        _id: "61714a889e83bb81cd0db258",
+        sensor_serial: 117964800,
+        channel_nr: 6,
+        value: 410,
+        logger_serial: 117964800,
+        timestamp: 1734814600384,
+      },
+      {
+        _id: "6171486c9e83bb81cd0db22b",
+        sensor_serial: 117964800,
+        channel_nr: 6,
+        value: 510,
+        logger_serial: 117964800,
+        timestamp: 1634814060205,
+      },
+      {
+        _id: "617146c89e83bb81cd0db208",
+        sensor_serial: 117964800,
+        channel_nr: 6,
+        value: 610,
+        logger_serial: 117964800,
+        timestamp: 1534813640434,
+      },
+    ],
+  },
+  {
+    _id: 4,
+    sensorReadings: [
+      {
+        _id: "61740c00b791f5a98db7ee17",
+        sensor_serial: 117964800,
+        channel_nr: 6,
+        value: 700,
+        logger_serial: 117964800,
+        timestamp: 2634995200017,
+      },
+      {
+        _id: "61740c00b791f5a98db7ee17",
+        sensor_serial: 117964800,
+        channel_nr: 6,
+        value: 750,
+        logger_serial: 117964800,
+        timestamp: 2534995200017,
+      },
+      {
+        _id: "6171576c9e83bb81cd0db366",
+        sensor_serial: 117964800,
+        channel_nr: 6,
+        value: 860,
+        logger_serial: 117964800,
+        timestamp: 2434817900054,
+      },
+      {
+        _id: "617155149e83bb81cd0db339",
+        sensor_serial: 117964800,
+        channel_nr: 6,
+        value: 500,
+        logger_serial: 117964800,
+        timestamp: 2334817300815,
+      },
+      {
+        _id: "617152f89e83bb81cd0db30c",
+        sensor_serial: 117964800,
+        channel_nr: 6,
+        value: 298,
+        logger_serial: 117964800,
+        timestamp: 2234816760332,
+      },
+      {
+        _id: "617151909e83bb81cd0db2ee",
+        sensor_serial: 117964800,
+        channel_nr: 6,
+        value: 1300,
+        logger_serial: 117964800,
+        timestamp: 2134816400090,
+      },
+      {
+        _id: "617150649e83bb81cd0db2d5",
+        sensor_serial: 117964800,
+        channel_nr: 6,
+        value: 250,
+        logger_serial: 117964800,
+        timestamp: 2034816100211,
+      },
+      {
+        _id: "61714e489e83bb81cd0db2a8",
+        sensor_serial: 117964800,
+        channel_nr: 6,
+        value: 750,
+        logger_serial: 117964800,
+        timestamp: 1934815560021,
+      },
+      {
+        _id: "61714ca49e83bb81cd0db285",
+        sensor_serial: 117964800,
+        channel_nr: 6,
+        value: 540,
+        logger_serial: 117964800,
+        timestamp: 1834815140943,
+      },
+      {
+        _id: "61714a889e83bb81cd0db258",
+        sensor_serial: 117964800,
+        channel_nr: 6,
+        value: 100,
+        logger_serial: 117964800,
+        timestamp: 1734814600384,
+      },
+      {
+        _id: "6171486c9e83bb81cd0db22b",
+        sensor_serial: 117964800,
+        channel_nr: 6,
+        value: 310,
+        logger_serial: 117964800,
+        timestamp: 1634814060205,
+      },
+      {
+        _id: "617146c89e83bb81cd0db208",
+        sensor_serial: 117964800,
+        channel_nr: 6,
+        value: 210,
+        logger_serial: 117964800,
+        timestamp: 1534813640434,
+      },
+    ],
+  },
   //  {
   //     "_id":2,
   //     "sensorReadings":[

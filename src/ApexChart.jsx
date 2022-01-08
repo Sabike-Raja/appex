@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Chart from "react-apexcharts";
 import moment from "moment";
 import ApexCharts from "apexcharts";
 
 import { mockData } from "./constant";
-import { useEffect } from "react/cjs/react.development";
 
 function App() {
   let seriesData = [];
+
+  const [dataList, setDataList] = useState([]);
+  const [currentData, setCurrentData] = useState([]);
 
   for (let i = 0; i < mockData.length; i++) {
     const coordinates = [];
@@ -27,7 +29,7 @@ function App() {
       type: "area",
       stacked: false,
       height: 650,
-      id:"assetDistribution",
+      id: "assetDistribution",
       zoom: {
         type: "x",
         enabled: true,
@@ -54,6 +56,9 @@ function App() {
     },
     markers: {
       size: 0,
+    },
+    legend: {
+      show: false,
     },
     title: {
       text: "Stock Price Movement",
@@ -123,21 +128,77 @@ function App() {
     },
   };
 
-  // const test = new ApexCharts();
+  useEffect(() => {
+    if (series.length && dataList.length === 0) {
+      const tempData = series.map((mapData) => mapData.name);
+      setDataList(tempData);
+      const slicedArray = tempData.slice(0, 2);
+      tempData.forEach((mapData) => {
+        if (!slicedArray.includes(mapData)) {
+          ApexCharts.exec("assetDistribution", "hideSeries", mapData);
+        }
+      });
+      setCurrentData(slicedArray);
+    }
+  }, [series]);
 
-  // useEffect(() => {
-  //   const el = document.getElementById("charrt")
-  //   var chart = new ApexCharts(el, options);
-  //   chart.render();
-  // }, []);
-
-  console.log("dsflks;dlf", ApexCharts.exec);
+  const onClickChartName = (clickedItem) => {
+    if (currentData.includes(clickedItem)) {
+      let tempData = [...currentData];
+      tempData = tempData.filter((filterData) => filterData != clickedItem);
+      for (const name of dataList) {
+        if (!currentData.includes(name)) {
+          tempData.push(name);
+          ApexCharts.exec("assetDistribution", "showSeries", name);
+          break;
+        }
+      }
+      ApexCharts.exec("assetDistribution", "hideSeries", clickedItem);
+      setCurrentData(tempData);
+    } else {
+      let tempData = [...currentData];
+      if (tempData.length) {
+        ApexCharts.exec("assetDistribution", "hideSeries", tempData[0]);
+        ApexCharts.exec("assetDistribution", "showSeries", clickedItem);
+        tempData.shift();
+        tempData.push(clickedItem);
+        setCurrentData(tempData);
+      }
+    }
+  };
 
   return (
     <div id="chat-id">
-
       <Chart options={options} series={series} type="line" height={650} />
-      <div id="charrt"></div>
+      <div style={{ textAlign: "center", fontSize: "13px", color: "#706c6c" }}>
+        {series.map((mapData) => (
+          <span
+            onClick={() => onClickChartName(mapData.name)}
+            key={mapData.name}
+          >
+            <span
+              style={{
+                height: "10px",
+                width: "10px",
+                backgroundColor: currentData.includes(mapData.name)
+                  ? "rgb(57 131 72)"
+                  : "#bbb",
+                borderRadius: "50%",
+                display: "inline-block",
+              }}
+            ></span>
+            <span
+              style={{
+                cursor: "pointer",
+                marginLeft: "4px",
+                marginRight: "4px",
+              }}
+            >
+              {mapData.name}
+            </span>
+          </span>
+        ))}
+      </div>
       <button
         onClick={() => {
           ApexCharts.exec(
